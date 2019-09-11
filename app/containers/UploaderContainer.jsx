@@ -18,35 +18,13 @@ class UploaderContainer extends React.Component {
       fileUploads: []
       
     }
-    this.startUpload = this.startUpload.bind(this)
+    this.handleUpload = this.handleUpload.bind(this)
   }
   
-  startUpload(file) {
-    // Start the file upload process
-    // for an individual file
-    console.log(file)
+  handleUpload(file) {
     let xhr = new XMLHttpRequest()
     let uploadUrl = `${ UPLOAD_BUCKET }/${ file.name }`
     xhr.open('PUT', uploadUrl)
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) { 
-          console.log(file.sourceURL)
-          console.log('reached 100')
-        }
-      }
-    }      
-    xhr.upload.onprogress = function (e) {        
-      var percentComplete = Math.ceil((e.loaded / e.total) * 100); 
-      console.log(file.sourceURL)
-      console.log(percentComplete)
-    }      
-    xhr.setRequestHeader('Content-Type', file.mime)
-    xhr.ontimeout = (e) => {     
-      xhr.abort()
-      console.log(file.sourceURL)
-      console.log('failed')
-    }
     xhr.overrideMimeType(file.type);
     xhr.send(file);
   }
@@ -58,7 +36,7 @@ class UploaderContainer extends React.Component {
                complete={allUploadsComplete}
                uploads={fileUploads} />;
     } else {
-      return <UploadForm startUpload={this.startUpload} />;
+      return <UploadForm handleUpload={this.handleUpload} />;
     }
   }
 }
