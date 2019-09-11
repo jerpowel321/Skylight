@@ -19,4 +19,4 @@ There are **no rules**! Feel free to change, add, or delete whatever you want. T
 As long as the final product meets the criteria outlined above, this is your sandbox to code however you like!
 
 ### Potential Gotchas
-I did encounter one issue with Glitch while building this. It seems that sometimes their webpack watch process gets killed. So if you're making changes and they're not being reflected, even when you hit the refresh button, try editing the `throttle` number in `watch.json`.
+I did encounter one issue with Glitch while building this. It seems that sometimes their webpack watch process gets killed. So if you're making changes to the code and they're not being reflected in the Show panel, even when you hit the refresh button, try editing the `throttle` number in `watch.json`.
