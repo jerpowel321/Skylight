@@ -20,8 +20,8 @@ class UploaderContainer extends React.Component {
   }
   
   startUpload(file) {
-    console.log('starting!')
-    console.log(file)
+    // Start the file upload process
+    // for an individual file
   }
   
   render() {
@@ -29,7 +29,7 @@ class UploaderContainer extends React.Component {
     if (uploading) {
       return <UploadProgress
                complete={allUploadsComplete}
-               uploads={fileUploads} />; 
+               uploads={fileUploads} />;
     } else {
       return <UploadForm startUpload={this.startUpload} />;
     }

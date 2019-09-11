@@ -8,7 +8,11 @@ class UploadForm extends React.Component {
 
   onChangeHandler(event) {
     const { startUpload } = this.props;
-    event.target.files.forEach(startUpload);
+    let i = 0;
+    while (i < event.target.files.length) {    
+      startUpload(event.target.files[i]);
+      i ++; 
+    }
   }
   
   render() {
