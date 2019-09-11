@@ -1,7 +1,7 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 
-/* Import Components */
-const HelloWorld = require('./components/HelloWorld');
+/* Import Container */
+const UploaderContainer = require('./containers/UploaderContainer');
 
-ReactDOM.render(<HelloWorld/>, document.getElementById('main'));
+ReactDOM.render(<UploaderContainer/>, document.getElementById('main'));

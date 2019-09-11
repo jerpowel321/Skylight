@@ -1,5 +1,5 @@
 const React = require('react');
-const UnorderedList = require('./UnorderedList');
+const UnorderedList = require('../components/UnorderedList');
 
 const dependenciesArray = [
   'express - middleware for the node server',
@@ -16,10 +16,10 @@ const componentsMade = [
 ];
 
 /* the main page for the index route of this app */
-const HelloWorld = function() {
+const UploaderContainer = function() {
   return (
     <div>
-      <h1>Hello World!</h1>
+      <h1>Hi world</h1>
 
       <p>This is a starter <a href="http://glitch.com">Glitch</a> app for React! It uses 
         only a few dependencies to get you started on working with React:</p>
@@ -33,4 +33,4 @@ const HelloWorld = function() {
   );
 }
 
-module.exports = HelloWorld;
+module.exports = UploaderContainer;
