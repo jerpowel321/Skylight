@@ -11,12 +11,7 @@ class UploaderContainer extends React.Component {
     this.state = {
       uploading: false,
       allUploadsComplete: false,
-      
-      //// fileUploads should become an array of objects
-      //// that look like this:
-      // { progressPercent: 50, filename: 'dogs.png' }      
       fileUploads: []
-      
     }
     this.handleUpload = this.handleUpload.bind(this)
   }
