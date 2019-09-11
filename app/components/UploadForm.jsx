@@ -2,7 +2,8 @@ const React = require('react');
 
 class UploadForm extends React.Component {
   onChangeHandler(event) {
-    console.log(event.target.files.length)
+    const { startUpload } = this.props
+    event.target.files.forEach(startUpload)
   }
   
   render() {
