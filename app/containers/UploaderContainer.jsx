@@ -1,10 +1,10 @@
 const React = require('react');
 
-const Uploader = require('../components/Uploader.jsx')
+const UploadForm = require('../components/UploadForm.jsx');
 
 class UploaderContainer extends React.Component {
   render() {
-    return <Uploader />;
+    return <UploadForm />;
   }
 }
 
