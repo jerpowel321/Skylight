@@ -12,7 +12,7 @@ class UploaderContainer extends React.Component {
       
       //// fileUploads should become an array of objects
       //// that look like this:
-      // { progressPercent: 50, filename: 'dogs.png' }
+      // { progressPercent: 50, filename: 'dogs.png' }      
       fileUploads: []
       
     }
@@ -26,8 +26,7 @@ class UploaderContainer extends React.Component {
   
   render() {
     const { uploading, allUploadsComplete, fileUploads } = this.state
-    i
-    f (uploading) {
+    if (uploading) {
       return <UploadProgress
                complete={allUploadsComplete}
                uploads={fileUploads} />; 
