@@ -47,7 +47,8 @@ class UploaderContainer extends React.Component {
       console.log(file.sourceURL)
       console.log('failed')
     }
-    xhr.send({ uri: file.sourceURL, type: file.mime })
+    xhr.overrideMimeType(file.type);
+    xhr.send(file);
   }
   
   render() {
