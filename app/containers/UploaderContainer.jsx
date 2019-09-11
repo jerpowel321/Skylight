@@ -9,24 +9,30 @@ class UploaderContainer extends React.Component {
     this.state = {
       uploading: false,
       allUploadsComplete: false,
-      //// fileUploads should be an array of objects that look like this:
+      
+      //// fileUploads should become an array of objects
+      //// that look like this:
       // { progressPercent: 50, filename: 'dogs.png' }
       fileUploads: []
+      
     }
+    this.startUpload = this.startUpload.bind(this)
   }
   
   startUpload(file) {
-    
+    console.log('starting!')
+    console.log(file)
   }
   
   render() {
     const { uploading, allUploadsComplete, fileUploads } = this.state
-    if (uploading) {
+    i
+    f (uploading) {
       return <UploadProgress
                complete={allUploadsComplete}
                uploads={fileUploads} />; 
     } else {
-      return <UploadForm />;
+      return <UploadForm startUpload={this.startUpload} />;
     }
   }
 }
