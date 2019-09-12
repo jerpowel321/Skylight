@@ -1,7 +1,7 @@
 Skylight React Interview Project
 ===========================
 
-First of all, **feel free to download this project** off of Glitch, if you don't want to work through their IDE. We made it a Glitch project so that you don't have to spend anytime configuring your local environment, but use the environment of your choice!
+First of all, **feel free to download this project** off of Glitch, if you don't want to work through their IDE. We made it a Glitch project so that you don't have to spend any time configuring your local environment, but use the environment of your choice!
 
 ## The Assignment
 
