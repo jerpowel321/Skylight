@@ -8,11 +8,7 @@ const UPLOAD_BUCKET = 'https://skylight-react-interview-project.s3.amazonaws.com
 class UploaderContainer extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      uploading: false,
-      allUploadsComplete: false,
-      fileUploads: []
-    }
+    this.state = { uploading: false }
     this.handleUpload = this.handleUpload.bind(this)
   }
   
@@ -25,11 +21,9 @@ class UploaderContainer extends React.Component {
   }
   
   render() {
-    const { uploading, allUploadsComplete, fileUploads } = this.state
+    const { uploading } = this.state
     if (uploading) {
-      return <UploadProgress
-               complete={allUploadsComplete}
-               uploads={fileUploads} />;
+      return <UploadProgress />;
     } else {
       return <UploadForm handleUpload={this.handleUpload} />;
     }
