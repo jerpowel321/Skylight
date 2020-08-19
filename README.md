@@ -1,7 +1,4 @@
-<p align="center">
-<img src="public/landing.png" alt="Landing Page" width="900" >
-</p>
-
+<img src="public/landing.png" alt="Landing Page" width="100%" >
 
 Skylight React Interview Project
 ===========================
