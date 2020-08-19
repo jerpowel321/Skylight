@@ -16,11 +16,12 @@ class UploadForm extends React.Component {
   }
   
   render() {
-    return (<div>
-      <h1>Pick Multiple Photos</h1>
-      <p>Click on "Choose Files" and then use "command" on a Mac or CTRL on Windows to select multiple files.</p>
+    return (<div className="pb-5">
+      <h1 style={{fontFamily: "'Lora', serif"}} className="text-center pt-5 pb-2">Let's Pick Some Photos!</h1>
+      <p style={{fontFamily: "'Lora', serif", fontSize: "18px"}}>Click on "Choose Files" and then use "Command" on a Mac or CTRL on Windows to select multiple files.</p>
       <input type='file' name='file' multiple onChange={this.onChangeHandler} />
-    </div>);
+    </div>
+    )
   };
 }
 
